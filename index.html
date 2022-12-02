@@ -10,27 +10,144 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      padding: 20px;
+      background-color: #f3eae3;
+      height: 100vh;
+      display: grid;
+      flex-direction: column;
+      place-items: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    main {
+      width: clamp(25vw, 500px, 70vw);
+      display: flex;
+      /* justify-content: center; */
+      /* align-content: center; */
+      background-color: rgb(255, 255, 255);
+      /* border-radius: 10px; */
+      /* border: 2px solid black; */
+      border-radius: 8px;
+      /* border: 1px solid black; */
+      
+    }
+    .bg-image {
+      background-image: url(./images/image-product-desktop.jpg);
+      
+      /* background-repeat: no-repeat;
+      background-size: 100% 100%; */
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 100% 100%;
+      flex: 1;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+    .text {
+      background-color: white;
+      border-radius: 8px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 0.5rem;
+      align-items: center;
+    }
+
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 2.3rem;
+    }
+    /* img {
+      width: 50%;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    } */
+    footer {
+      margin-top: auto;
+    }
+    p > span {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #3d8168;
+    }
+    p:first-of-type {
+      letter-spacing: 0.1rem;
+      color: rgba(0,0,0,0.7)
+    }
+    button {
+      background-color: #3d8168;
+      padding: 10px;
+      color: white;
+      font-weight: 400;
+      border: 0;
+      border-radius: 8px;
+      background-image: url(./images/icon-cart.svg);
+      background-repeat: no-repeat;
+      background-position: 10% 50%;
+      width: 75%;
+      text-align: center;
+      /* align-self: center; */
+    }
+    button:hover {
+      background-color: #295041;
+    }
+    @media screen and (min-height: 650px) and (max-width: 950px) {
+      main {
+        flex-direction: column;
+        width: 100%;
+        min-height: 80vh;
+      }
+      .bg-image {
+        background-image: url(./images/image-product-mobile.jpg);
+        /* width: 100%; */
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 8px;
+        background-size: cover;
+        background-position: 50%;
+      }
+      .text {
+        width: 100%;
+        min-height: 50%;
+        row-gap: 1rem;
+      }
+    }
+    
   </style>
 </head>
 <body>
+  <main>
+    <!-- <img src="./images/image-product-desktop.jpg" alt="bottle of perfume surrounded by leaves"> -->
+    <section class="bg-image"></section>
+    <section class="text">
 
-  Preview
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
+      <article>
+        <p>PERFUME</p>
+        <p class="title">Gabrielle Essence Eau De Parfum</p>
+      </article>
+      <p>
+        A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+      <p><span>$149.99</span> <del>$169.99</del></p>
+      <button>Add to Cart</button>
+      
+    </section>
+  </main>
   
-  <div class="attribution">
+  
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/developerabz/">Abdullah Yakub</a>.
+  </footer>
 </body>
 </html>
